@@ -22,7 +22,8 @@ h1 {
 
 .repos-section,
 .events-section,
-.hooks-section {
+.hooks-section,
+.issues-section {
   width: 100%;
   border: solid 1px blue;
   display: flex;
@@ -32,13 +33,15 @@ h1 {
 
 .repos-title,
 .events-title,
-.hooks-title {
+.hooks-title,
+.issues-title {
 
 }
 
 .repos-id-div,
 .events-id-div,
-.hooks-id-div {
+.hooks-id-div,
+.issues-id-div {
   display: flex;
   width: 90%;
   height: 100%;
@@ -48,6 +51,7 @@ h1 {
 
 .individual-repo,
 .individual-event,
-.individual-hook {
+.individual-hook,
+.individual-issue {
   margin: 0 2%;
 }
