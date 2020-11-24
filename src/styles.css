@@ -16,10 +16,13 @@ main {
 
 h1 {
   /* color: blue; */
+  display: flex;
+  justify-content: center;
 }
 
 .repos-section,
-.events-section {
+.events-section,
+.hooks-section {
   width: 100%;
   border: solid 1px blue;
   display: flex;
@@ -28,12 +31,14 @@ h1 {
 }
 
 .repos-title,
-.events-title {
+.events-title,
+.hooks-title {
 
 }
 
 .repos-id-div,
-.events-id-div {
+.events-id-div,
+.hooks-id-div {
   display: flex;
   width: 90%;
   height: 100%;
@@ -42,6 +47,7 @@ h1 {
 }
 
 .individual-repo,
-.individual-event {
+.individual-event,
+.individual-hook {
   margin: 0 2%;
 }
