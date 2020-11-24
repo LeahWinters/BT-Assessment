@@ -22,7 +22,7 @@ const displayReposIds = (repos) => {
   repoIdsDiv.innerHTML = repos[0].map((repo) => {
       console.log(repo.id);
       return `
-        <section>
+        <section class="individual-repo">
           <p>Repo ID: ${repo.id}<p>
         </section>`;
   })
