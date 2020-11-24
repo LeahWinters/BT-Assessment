@@ -11,13 +11,15 @@ body {
 main {
   display: flex;
   height: 80%;
+  flex-direction: column;
 }
 
 h1 {
   /* color: blue; */
 }
 
-.repos-section {
+.repos-section,
+.events-section {
   width: 100%;
   border: solid 1px blue;
   display: flex;
@@ -25,11 +27,13 @@ h1 {
   align-items: center;
 }
 
-.repos-title {
+.repos-title,
+.events-title {
 
 }
 
-.repos-id-div {
+.repos-id-div,
+.events-id-div {
   display: flex;
   width: 90%;
   height: 100%;
@@ -37,6 +41,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.individual-repo {
+.individual-repo,
+.individual-event {
   margin: 0 2%;
 }
