@@ -1,5 +1,6 @@
 var getDataBtn = document.querySelector(".get-data-btn");
 var verifyDatesBtn = document.querySelector(".verify-dates-btn");
+var compareLengthBtn = document.querySelector(".compare-lengths-btn");
 
 getDataBtn.addEventListener('click', event => {
   handleClick(event);
@@ -7,13 +8,18 @@ getDataBtn.addEventListener('click', event => {
 verifyDatesBtn.addEventListener('click', event => {
   handleClick(event);
 });
+compareLengthBtn.addEventListener('click', event => {
+  handleClick(event);
+})
 
 const handleClick = (event) => {
   event.preventDefault();
-  if(event.target.classList.contains("get-data-btn")) {
+  if (event.target.classList.contains("get-data-btn")) {
     displayAllData();
-  } else if(event.target.classList.contains("verify-dates-btn")) {
+  } else if (event.target.classList.contains("verify-dates-btn")) {
     verifyDates();
+  } else if (event.target.classList.contains("verify-dates-btn")) {
+    compareReposLengths();
   }
 }
 
