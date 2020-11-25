@@ -15,7 +15,6 @@ main {
 }
 
 h1 {
-  /* color: blue; */
   display: flex;
   justify-content: center;
 }
@@ -31,15 +30,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.repos-title,
-.events-title,
-.hooks-title,
-.issues-title,
-.members-title,
-.public-members-title {
-
 }
 
 .repos-id-div,
@@ -62,4 +52,48 @@ h1 {
 .individual-member,
 .individual-public-members {
   margin: 0 2%;
+}
+
+.buttons-holder {
+  display: flex;
+  justify-content: space-around;
+  margin: 1%;
+}
+
+.data-btn-section {
+  display: flex;
+  justify-content: center;
+  width: 17%;
+}
+
+.get-data-btn {
+  cursor: pointer;
+}
+
+.verify-dates-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+}
+
+.verify-dates-btn {
+  align-self: center;
+  cursor: pointer;
+  width: 50%;
+}
+
+.verify-result-div {
+  align-self: center;
+  width: 58%;
+}
+
+.compare-lengths-btn {
+  cursor: pointer;
+}
+
+.compare-lengths-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
