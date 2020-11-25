@@ -18,8 +18,8 @@ const handleClick = (event) => {
     displayAllData();
   } else if (event.target.classList.contains("verify-dates-btn")) {
     verifyDates();
-  } else if (event.target.classList.contains("verify-dates-btn")) {
-    compareReposLengths();
+  } else if (event.target.classList.contains("compare-lengths-btn")) {
+    getAllReposData();
   }
 }
 
@@ -157,6 +157,32 @@ const displayPublicMembersErrorMessage = async () => {
   }
 };
 
-const compareReposLengths = async () => {
+const getAllReposData = async () => {
+  const publicRepos = await fetchData('https://api.github.com/orgs/BoomTownROI');
 
+  // Since the api only serves 30 objects at a time for /repos, we need to know how many pages we need to pull 
+  let cyclesNeeded = Math.ceil(publicRepos.public_repos/30);
+  let repoCount = 0;
+  
+  // I iterate over /repos with a forLoop with the cyclesNeeded as the benchmark for i
+  for(i = 1; i <= cyclesNeeded; i++) {
+    repoCount += await iterateRepos(i);
+  }
+  
+  compareReposLengths(repoCount, publicRepos.public_repos);
+}
+
+const iterateRepos = async (i) => {
+  let data = await fetchData(`https://api.github.com/orgs/BoomTownROI/repos?page=${i}`)
+  return data.length;
+}
+
+const compareReposLengths = async (reposLength, publicRepos) => {
+  const resultsDiv = document.querySelector(".lengths-result-div");
+
+  if(reposLength === publicRepos) {
+    resultsDiv.innerHTML = `They are the same length.`;
+  } else {
+    resultsDiv.innerHTML = `They are not the same length.`;
+  }
 }
