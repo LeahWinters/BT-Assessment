@@ -130,7 +130,6 @@ const displayMembersErrorMessage = async () => {
     membersIdsDiv.innerHTML = `<section class="individual">
        <p>No Members Found<p>
      </section>`;
-    console.log(membersData);
   } else {
     membersIdsDiv.innerHTML = membersData.map((member) => {
       return `
