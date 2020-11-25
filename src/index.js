@@ -10,7 +10,6 @@ verifyDatesBtn.addEventListener('click', event => {
 
 const handleClick = (event) => {
   event.preventDefault();
-  // event.target.classList.contains("get-data-btn") ? displayAllData() : false;
   if(event.target.classList.contains("get-data-btn")) {
     displayAllData();
   } else if(event.target.classList.contains("verify-dates-btn")) {
@@ -38,9 +37,9 @@ const verifyDates = async () => {
   let newUpdateDate = new Date(originalUpdateDate);
 
   if(newCreateDate < newUpdateDate) {
-    verifyDateDiv.innerHTML = `update date is newer then create date`
+    verifyDateDiv.innerHTML = `Update date is newer then create date.`
   } else {
-    verifyDateDiv.innerHTML = `update date is older then create date`
+    verifyDateDiv.innerHTML = `Update date is older then create date.`
   }
 }
  
@@ -151,3 +150,7 @@ const displayPublicMembersErrorMessage = async () => {
     });
   }
 };
+
+const compareReposLengths = async () => {
+
+}
