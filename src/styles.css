@@ -45,12 +45,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.individual-repo,
-.individual-event,
-.individual-hook,
-.individual-issue,
-.individual-member,
-.individual-public-members {
+.individual {
   margin: 0 2%;
 }
 

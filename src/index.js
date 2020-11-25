@@ -56,7 +56,7 @@ const displayReposIds = async () => {
 
   repoIdsDiv.innerHTML = reposData.map((repo) => {
     return `
-      <section class="individual-repo">
+      <section class="individual">
         <p>Repo ID: ${repo.id}<p>
       </section>`;
   });
@@ -71,7 +71,7 @@ const displayEventsIds = async () => {
 
   eventsIdsDiv.innerHTML = eventsData.map((event) => {
     return `
-      <section class="individual-event">
+      <section class="individual">
         <p>Event ID: ${event.id}<p>
       </section>`;
   });
@@ -85,13 +85,13 @@ const displayHooksErrorMessage = async () => {
   );
 
   if (hooksData.message === "Not Found") {
-    hooksIdsDiv.innerHTML = `<section class="individual-hook">
+    hooksIdsDiv.innerHTML = `<section class="individual">
         <p>No Hooks Found<p>
       </section>`;
   } else {
     hooksIdsDiv.innerHTML = hooksData.map((hook) => {
       return `
-      <section class="individual-event">
+      <section class="individual">
         <p>Hook ID: ${hook.id}<p>
       </section>`;
     });
@@ -106,13 +106,13 @@ const displayIssuesErrorMessage = async () => {
   );
 
   if (issuesData.message === "Not Found") {
-    issuesIdsDiv.innerHTML = `<section class="individual-issue">
+    issuesIdsDiv.innerHTML = `<section class="individual">
         <p>No Issues Found<p>
       </section>`;
   } else {
     issuesIdsDiv.innerHTML = issuesData.map((issue) => {
       return `
-      <section class="individual-issue">
+      <section class="individual">
         <p>Issue ID: ${issue.id}<p>
       </section>`;
     });
@@ -127,14 +127,14 @@ const displayMembersErrorMessage = async () => {
   );
 
   if (membersData.message === "Not Found") {
-    membersIdsDiv.innerHTML = `<section class="individual-member">
+    membersIdsDiv.innerHTML = `<section class="individual">
        <p>No Members Found<p>
      </section>`;
     console.log(membersData);
   } else {
     membersIdsDiv.innerHTML = membersData.map((member) => {
       return `
-     <section class="individual-member">
+     <section class="individual">
        <p>Member ID: ${member.id}<p>
      </section>`;
     });
@@ -149,13 +149,13 @@ const displayPublicMembersErrorMessage = async () => {
   );
 
   if (publicMembersData.message === "Not Found") {
-    publicMembersIdsDiv.innerHTML = `<section class="individual-public-members">
+    publicMembersIdsDiv.innerHTML = `<section class="individual">
        <p>No Public Members Found<p>
      </section>`;
   } else {
     publicMembersIdsDiv.innerHTML = publicMembersData.map((member) => {
       return `
-     <section class="individual-public-member">
+     <section class="individual">
        <p>Public Member ID: ${member.id}<p>
      </section>`;
     });
