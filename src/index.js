@@ -6,15 +6,17 @@ getDataBtn.addEventListener('click', event => {
 
 const handleClick = (event) => {
   event.preventDefault();
-  // refactor to ternary when works
-  if(event.target.classList.contains("get-data-btn")) {
-    displayReposIds();
-    // displayEventsIds();
-    // displayHooksErrorMessage();
-    // displayIssuesErrorMessage();
-    // displayMembersErrorMessage();
-    // displayPublicMembersErrorMessage();
-  }
+  event.target.classList.contains("get-data-btn") ? displayAllData() : false;
+}
+
+const displayAllData = () => {
+  console.log("I worked");
+  displayReposIds();
+  displayEventsIds();
+  displayHooksErrorMessage();
+  displayIssuesErrorMessage();
+  displayMembersErrorMessage();
+  displayPublicMembersErrorMessage();
 }
  
 const fetchData = async (url) => {
